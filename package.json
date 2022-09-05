@@ -1,0 +1,22 @@
+{
+  "name": "gdz9",
+  "version": "1.0.0",
+  "description": "gdz9.github.io",
+  "scripts": {
+    "test": "node --version",
+    "pug": "pug --watch -P -o . index.pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdz9/gdz9.github.io.git"
+  },
+  "author": "gdz9",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gdz9/gdz9.github.io/issues"
+  },
+  "homepage": "https://github.com/gdz9/gdz9.github.io#readme",
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

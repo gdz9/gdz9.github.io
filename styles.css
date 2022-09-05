@@ -1,5 +1,6 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Scada&display=swap');
+
 body {
 	font-family: 'Scada', sans-serif;
 }
@@ -11,10 +12,20 @@ td {
 }
 
 /* align */
-#title {
+#title,
+#description {
 	text-align: center;
+}
+
+#title {
+	margin-bottom: 0;
 }
 
 #copyright {
 	text-align: right;
+}
+
+/* misc. */
+a[href="./index.html"]:hover {
+	text-decoration: none;
 }

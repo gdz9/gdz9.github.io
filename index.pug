@@ -15,10 +15,11 @@ doctype html
 //
 // Source: https://github.com/gdz9/gdz9.github.io/blob/main/index.pug
 //
+- let description = 'Колекція ГДЗ джерел (9 клас)';
 html
   head
     meta(name='author' content='gdz9')
-    meta(name='description' content='Колекція ГДЗ джерел (9 клас) — gdz9')
+    meta(name='description' content=`${description} — gdz9`)
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel='icon' type='image/png' href='./favicon.png')
@@ -28,7 +29,9 @@ html
   body
     // title
     h1
-      p#title gdz9
+      a(href='./index.html')
+        p#title gdz9
+    p#description= description
     br
     // download
     p 
@@ -140,7 +143,7 @@ html
               t: 'Хімія (8next)'
             },
           ],
-        ]
+        ];
       each row in list
         +row(row[0], row[1])
     // footer

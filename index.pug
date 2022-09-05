@@ -12,15 +12,19 @@ mixin br(n)
 
 //- html
 doctype html
+//
+// Source: https://github.com/gdz9/gdz9.github.io/blob/main/index.pug
+//
 html
   head
-    meta(name="description" content="Колекція ГДЗ на 9 клас — gdz9")
+    meta(name='author' content='gdz9')
+    meta(name='description' content='Колекція ГДЗ джерел (9 клас) — gdz9')
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    link(rel="icon" type="image/png" href="./favicon.png")
+    link(rel='icon' type='image/png' href='./favicon.png')
     title gdz9
-    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css")
-    link(rel="stylesheet" href="./styles.css")
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css')
+    link(rel='stylesheet' href='./styles.css')
   body
     // title
     h1
@@ -30,7 +34,7 @@ html
     p 
       | Пакет всех учебников (PDF)
       br
-      a(href="https://drive.google.com/file/d/1lIqegb46nSO3kIdbHnbDNL-Zd4UJJvEG/view" target="_blank") Підручники.zip
+      a(href='https://drive.google.com/file/d/1lIqegb46nSO3kIdbHnbDNL-Zd4UJJvEG/view' target='_blank') Підручники.zip
     br
     // list
     table
@@ -93,7 +97,7 @@ html
             },
             {
               u: 'https://ukrdz.in.ua/nimetska-mova-9-klas-sotnikova-gogolyeva-2017/',
-              t: 'Історія україни (ukrdz)'
+              t: 'Німецька мова (ukrdz)'
             },
           ],
           [
@@ -144,4 +148,4 @@ html
     hr
     p#copyright
       | (c) 2022 
-      a(href="https://github.com/gdz9" target="_blank") gdz9
+      a(href='https://github.com/gdz9' target='_blank') gdz9

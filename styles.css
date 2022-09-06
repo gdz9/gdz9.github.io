@@ -21,8 +21,9 @@ td {
 	margin-bottom: 0;
 }
 
-#copyright {
-	text-align: right;
+#footer {
+	display: flex;
+	justify-content: space-between;
 }
 
 /* misc. */

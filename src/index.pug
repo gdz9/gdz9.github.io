@@ -13,7 +13,7 @@ mixin br(n)
 //- html
 doctype html
 //
-// Source: https://github.com/gdz9/gdz9.github.io/blob/main/index.pug
+// Source: https://github.com/gdz9/gdz9.github.io/blob/main/src/index.pug
 //
 - let description = 'Колекція ГДЗ джерел (9 клас)';
 html
@@ -29,8 +29,8 @@ html
   body
     // title
     h1
-      a(href='./index.html')
-        p#title gdz9
+      p#title
+        a(href='/') gdz9
     p#description= description
     br
     // download
@@ -155,3 +155,6 @@ html
       p
         | (c) 2022 
         a(href='https://github.com/gdz9' target='_blank') gdz9
+        | ,
+        br
+        | Arseniy Chereda

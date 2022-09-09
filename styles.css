@@ -17,7 +17,9 @@ td {
 	text-align: center;
 }
 
-#title {
+#description,
+#title,
+hr {
 	margin-bottom: 0;
 }
 
@@ -26,7 +28,11 @@ td {
 	justify-content: space-between;
 }
 
-/* misc. */
-a[href="./index.html"]:hover {
+#footer > p {
+	text-align: right;
+}
+
+/* other */
+#title > a:hover {
 	text-decoration: none;
 }

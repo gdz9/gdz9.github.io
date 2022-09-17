@@ -4,7 +4,7 @@
   "description": "gdz9.github.io",
   "scripts": {
     "test": "node --version",
-    "pug": "pug src/index.pug --pretty --watch -o ."
+    "pug": "pug src/ --pretty --watch -o ."
   },
   "repository": {
     "type": "git",

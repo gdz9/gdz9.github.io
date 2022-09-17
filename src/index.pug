@@ -1,14 +1,5 @@
 //- mixins
-mixin row(first, second)
-  tr
-    td
-      a(href=first.u target='_blank') #{first.t}
-    td
-      a(href=second.u target='_black') #{second.t}
-
-mixin br(n)
-  for i in Array(n)
-    br
+include mixins
 
 //- html
 doctype html
@@ -30,12 +21,12 @@ html
     // title
     h1
       p#title
-        a(href='/') gdz9
+        a(href='./funny/index.html') gdz9
     p#description= description
     br
     // download
     p 
-      | Пакет всех учебников (PDF)
+      | Пакет усіх підручників (PDF)
       br
       a(href='https://drive.google.com/file/d/1lIqegb46nSO3kIdbHnbDNL-Zd4UJJvEG/view' target='_blank') Підручники.zip
     br

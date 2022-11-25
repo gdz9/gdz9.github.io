@@ -2,8 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let new_tab_checkbox = document.getElementById('new-tab-checkbox');
   if (localStorage.getItem('open_new_tab') === 'true') {
     new_tab_checkbox.checked = true;
+    table_set_target(true);
   } else if (localStorage.getItem('open_new_tab') === 'false') {
-    new_tab_checkbox.checked = false
+    new_tab_checkbox.checked = false;
+    table_set_target(false);
   } else {
     // default
     new_tab_checkbox.checked = true;

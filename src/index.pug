@@ -14,9 +14,10 @@ html
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel='icon' type='image/png' href='./favicon.png')
-    title gdz9
+    title gdz9 - ГДЗ джерела
     link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css')
     link(rel='stylesheet' href='./styles.css')
+    script(defer src='./main.js')
   body
     // title
     h1
@@ -24,11 +25,19 @@ html
         a(href='./funny/index.html') gdz9
     p#description= description
     br
-    // download
-    p 
-      | Пакет усіх підручників (PDF)
-      br
-      a(href='https://drive.google.com/file/d/1lIqegb46nSO3kIdbHnbDNL-Zd4UJJvEG/view' target='_blank') Підручники.zip
+    // download & new tab
+    #panel
+      div
+        // download
+        p(align='center')
+          | Пакет усіх підручників (PDF)
+          br
+          a(href='https://drive.google.com/file/d/1lIqegb46nSO3kIdbHnbDNL-Zd4UJJvEG/view' target='_blank') Підручники.zip
+      div
+        // new tab
+        p(align='center')
+          input#new-tab-checkbox(type='checkbox' checked onchange="on_new_tab_checkbox(this)")
+          a#new-tab Відкривати нову вкладку
     br
     // list
     table
@@ -37,7 +46,7 @@ html
           [
             {
               u: 'https://shkola.obozrevatel.com/gdz/9klass/algebra/ister-20173/',
-              t: 'Алгебра (obozrevatel)'
+              t: 'Алгебра*'
             },
             {
               u: 'https://vshkole.com/9-klass/reshebniki/algebra/os-ister-2017',
@@ -47,7 +56,7 @@ html
           [
             {
               u: 'https://shkola.obozrevatel.com/gdz/9klass/biologija/sobol-20172/',
-              t: 'Біологія (obozrevatel)'
+              t: 'Біологія*'
             },
             {
               u: 'https://shkola.in.ua/2441-hdz-biolohiia-9-klas-sobol-2017.html',
@@ -57,7 +66,7 @@ html
           [
             {
               u: 'https://shkola.obozrevatel.com/gdz/9klass/geometrija/ister-20171/',
-              t: 'Геометрія (obozrevatel)'
+              t: 'Геометрія*'
             },
             {
               u: 'https://vshkole.com/9-klass/reshebniki/geometriya/os-ister-2017',
@@ -67,7 +76,7 @@ html
           [
             {
               u: 'https://shkola.obozrevatel.com/gdz/9klass/informatika/ryivkind-2017/',
-              t: 'Інформатика (obozrevatel)'
+              t: 'Інформатика*'
             },
             {
               u: 'https://vshkole.com/9-klass/reshebniki/informatika/jya-rivkind-ti-lisenko-la-chernikova-vv-shakotko-2017',
@@ -77,7 +86,7 @@ html
           [
             {
               u: 'https://shkola.obozrevatel.com/gdz/9klass/istorija_ukrainy/gisem-20176/2-naddnipryanska-ukraina-u-skladi-rosijskoi-imperii/7/',
-              t: 'Історія україни (obozrevatel)'
+              t: 'Історія україни*'
             },
             {
               u: 'https://rule.school/9-klas/history-of-ukraine-9/604-gdz-storya-ukrayini-9-klas-pdruchnik-gsem-ov-martinyuk-oo-2017.html',
@@ -87,7 +96,7 @@ html
           [
             {
               u: 'https://shkola.obozrevatel.com/gdz/9klass/nemeckij/sotnikova-2017/',
-              t: 'Німецька мова (obozrevatel)'
+              t: 'Німецька мова*'
             },
             {
               u: 'https://ukrdz.in.ua/nimetska-mova-9-klas-sotnikova-gogolyeva-2017/',
@@ -97,7 +106,7 @@ html
           [
             {
               u: 'https://shkola.obozrevatel.com/gdz/9klass/pravovedenie/narovlyanskij-2017/',
-              t: 'Основи правознавства (obozrevatel)'
+              t: 'Основи правознавства*'
             },
             {
               u: 'https://12baliv.com.ua/gdz-9-klas-pravoznavstvo-narovlyanskyj-2017',
@@ -107,7 +116,7 @@ html
           [
             {
               u: 'https://shkola.obozrevatel.com/gdz/9klass/ukrainskij/glazova-2017/',
-              t: 'Українська мова (obozrevatel)'
+              t: 'Українська мова*'
             },
             {
               u: 'https://vshkole.com/9-klass/reshebniki/ukrayinska-mova/op-glazova-2017',
@@ -117,7 +126,7 @@ html
           [
             {
               u: 'https://shkola.obozrevatel.com/gdz/9klass/fizika/baryahtyar-2017/',
-              t: 'Фізика (obozrevatel)'
+              t: 'Фізика*'
             },
             {
               u: 'https://ukrdz.in.ua/fizika-9-klas-bar-yahtar-dovgij-2017/',
@@ -127,7 +136,7 @@ html
           [
             {
               u: 'https://shkola.obozrevatel.com/gdz/9klass/himija/yaroshenko-2017/',
-              t: 'Хімія (obozrevatel)'
+              t: 'Хімія*'
             },
             {
               u: 'http://8next.com/9h_ya_u2017.html',
@@ -138,7 +147,7 @@ html
       each row in list
         +row(row[0], row[1])
     // footer
-    +br(3)
+    +br(2)
     hr
     div#footer
       p

@@ -23,6 +23,11 @@ hr {
 	margin-bottom: 0;
 }
 
+#panel {
+	display: flex;
+	justify-content: space-between;
+}
+
 #footer {
 	display: flex;
 	justify-content: space-between;
@@ -34,5 +39,9 @@ hr {
 
 /* other */
 #title > a:hover {
+	text-decoration: none;
+}
+
+#new-tab:hover {
 	text-decoration: none;
 }

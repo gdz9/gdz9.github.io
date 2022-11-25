@@ -9,9 +9,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="./favicon.png">
-    <title>gdz9</title>
+    <title>gdz9 - ГДЗ джерела</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
     <link rel="stylesheet" href="./styles.css">
+    <script defer src="./main.js"></script>
   </head>
   <body>
     <!-- title-->
@@ -19,53 +20,63 @@
       <p id="title"><a href="./funny/index.html">gdz9</a></p>
     </h1>
     <p id="description">Колекція ГДЗ джерел (9 клас)</p><br>
-    <!-- download-->
-    <p>
-       Пакет усіх підручників (PDF)<br><a href="https://drive.google.com/file/d/1lIqegb46nSO3kIdbHnbDNL-Zd4UJJvEG/view" target="_blank">Підручники.zip</a></p><br>
+    <!-- download & new tab-->
+    <div id="panel">
+      <div>
+        <!-- download-->
+        <p align="center">Пакет усіх підручників (PDF)<br><a href="https://drive.google.com/file/d/1lIqegb46nSO3kIdbHnbDNL-Zd4UJJvEG/view" target="_blank">Підручники.zip</a></p>
+      </div>
+      <div>
+        <!-- new tab-->
+        <p align="center">
+          <input id="new-tab-checkbox" type="checkbox" checked onchange="on_new_tab_checkbox(this)"><a id="new-tab">Відкривати нову вкладку</a>
+        </p>
+      </div>
+    </div><br>
     <!-- list-->
     <table>
       <tr>
-        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/algebra/ister-20173/" target="_blank">Алгебра (obozrevatel)</a></td>
+        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/algebra/ister-20173/" target="_blank">Алгебра*</a></td>
         <td><a href="https://vshkole.com/9-klass/reshebniki/algebra/os-ister-2017" target="_black">Алгебра (vshkole)</a></td>
       </tr>
       <tr>
-        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/biologija/sobol-20172/" target="_blank">Біологія (obozrevatel)</a></td>
+        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/biologija/sobol-20172/" target="_blank">Біологія*</a></td>
         <td><a href="https://shkola.in.ua/2441-hdz-biolohiia-9-klas-sobol-2017.html" target="_black">Біологія (shkola)</a></td>
       </tr>
       <tr>
-        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/geometrija/ister-20171/" target="_blank">Геометрія (obozrevatel)</a></td>
+        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/geometrija/ister-20171/" target="_blank">Геометрія*</a></td>
         <td><a href="https://vshkole.com/9-klass/reshebniki/geometriya/os-ister-2017" target="_black">Геометрія (vshkole)</a></td>
       </tr>
       <tr>
-        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/informatika/ryivkind-2017/" target="_blank">Інформатика (obozrevatel)</a></td>
+        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/informatika/ryivkind-2017/" target="_blank">Інформатика*</a></td>
         <td><a href="https://vshkole.com/9-klass/reshebniki/informatika/jya-rivkind-ti-lisenko-la-chernikova-vv-shakotko-2017" target="_black">Інформатика (vshkole)</a></td>
       </tr>
       <tr>
-        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/istorija_ukrainy/gisem-20176/2-naddnipryanska-ukraina-u-skladi-rosijskoi-imperii/7/" target="_blank">Історія україни (obozrevatel)</a></td>
+        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/istorija_ukrainy/gisem-20176/2-naddnipryanska-ukraina-u-skladi-rosijskoi-imperii/7/" target="_blank">Історія україни*</a></td>
         <td><a href="https://rule.school/9-klas/history-of-ukraine-9/604-gdz-storya-ukrayini-9-klas-pdruchnik-gsem-ov-martinyuk-oo-2017.html" target="_black">Історія україни (rule.school)</a></td>
       </tr>
       <tr>
-        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/nemeckij/sotnikova-2017/" target="_blank">Німецька мова (obozrevatel)</a></td>
+        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/nemeckij/sotnikova-2017/" target="_blank">Німецька мова*</a></td>
         <td><a href="https://ukrdz.in.ua/nimetska-mova-9-klas-sotnikova-gogolyeva-2017/" target="_black">Німецька мова (ukrdz)</a></td>
       </tr>
       <tr>
-        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/pravovedenie/narovlyanskij-2017/" target="_blank">Основи правознавства (obozrevatel)</a></td>
+        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/pravovedenie/narovlyanskij-2017/" target="_blank">Основи правознавства*</a></td>
         <td><a href="https://12baliv.com.ua/gdz-9-klas-pravoznavstvo-narovlyanskyj-2017" target="_black">Основи правознавства (12baliv)</a></td>
       </tr>
       <tr>
-        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/ukrainskij/glazova-2017/" target="_blank">Українська мова (obozrevatel)</a></td>
+        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/ukrainskij/glazova-2017/" target="_blank">Українська мова*</a></td>
         <td><a href="https://vshkole.com/9-klass/reshebniki/ukrayinska-mova/op-glazova-2017" target="_black">Українська мова (vshkole)</a></td>
       </tr>
       <tr>
-        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/fizika/baryahtyar-2017/" target="_blank">Фізика (obozrevatel)</a></td>
+        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/fizika/baryahtyar-2017/" target="_blank">Фізика*</a></td>
         <td><a href="https://ukrdz.in.ua/fizika-9-klas-bar-yahtar-dovgij-2017/" target="_black">Фізика (ukrdz)</a></td>
       </tr>
       <tr>
-        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/himija/yaroshenko-2017/" target="_blank">Хімія (obozrevatel)</a></td>
+        <td><a href="https://shkola.obozrevatel.com/gdz/9klass/himija/yaroshenko-2017/" target="_blank">Хімія*</a></td>
         <td><a href="http://8next.com/9h_ya_u2017.html" target="_black">Хімія (8next)</a></td>
       </tr>
     </table>
-    <!-- footer--><br/><br/><br/>
+    <!-- footer--><br/><br/>
     <hr>
     <div id="footer">
       <p><a href="https://github.com/gdz9/gdz9.github.io" target="_blank">GitHub</a></p>

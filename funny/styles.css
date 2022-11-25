@@ -1,10 +1,28 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Scada&display=swap');
+
+body {
+  font-family: 'Scada', sans-serif;
+}
+
+/* align */
 #title {
   text-align: center;
 }
 
 #funny {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -55%);
 }
+
+/* other */
+#title > a:hover {
+  text-decoration: none;
+}
+
+#title > a:hover > #text {
+  text-decoration: underline;
+}
+

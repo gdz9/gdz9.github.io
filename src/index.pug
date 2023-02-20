@@ -12,7 +12,8 @@ html
     meta(name='author' content='gdz9')
     meta(name='description' content=`${description} — gdz9`)
     meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
     link(rel='icon' type='image/png' href='./favicon.png')
     title gdz9 - ГДЗ джерела
     link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css')
@@ -22,7 +23,7 @@ html
     // title
     h1
       p#title
-        a(href='./funny/') gdz9
+        a(href='./meme/') gdz9
     p#description= description
     br
     // download & new tab
@@ -37,7 +38,7 @@ html
         // new tab
         p(align='center')
           input#new-tab-checkbox(type='checkbox' checked onchange="on_new_tab_checkbox(this)")
-          a#new-tab Відкривати нову вкладку
+          a#new-tab Відкривати у новій вкладці
     br
     // list
     table
@@ -85,12 +86,12 @@ html
           ],
           [
             {
-              u: 'https://shkola.obozrevatel.com/gdz/9klass/istorija_ukrainy/gisem-20176/2-naddnipryanska-ukraina-u-skladi-rosijskoi-imperii/7/',
+              u: 'https://shkola.obozrevatel.com/gdz/9klass/istorija_ukrainy/gisem-20176/',
               t: 'Історія україни*'
             },
             {
               u: 'https://rule.school/9-klas/history-of-ukraine-9/604-gdz-storya-ukrayini-9-klas-pdruchnik-gsem-ov-martinyuk-oo-2017.html',
-              t: 'Історія україни (rule.school)'
+              t: 'Історія україни (rule)'
             },
           ],
           [
@@ -153,8 +154,8 @@ html
       p
         a(href='https://github.com/gdz9/gdz9.github.io' target='_blank') GitHub
       p
-        | (c) 2022 
+        | (c) 2023 
         a(href='https://github.com/gdz9' target='_blank') gdz9
         | ,
         br
-        | Arseniy Chereda
+        | Arsenii C.

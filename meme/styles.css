@@ -10,7 +10,7 @@ body {
   text-align: center;
 }
 
-#funny {
+#meme {
   position: absolute;
   top: 55%;
   left: 50%;
@@ -25,4 +25,3 @@ body {
 #title > a:hover > #text {
   text-decoration: underline;
 }
-

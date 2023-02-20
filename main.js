@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function on_new_tab_checkbox(e) {
-  open_new_tab = e.checked;
+  let open_new_tab = e.checked;
   table_set_target(open_new_tab);
   localStorage.setItem('open_new_tab', open_new_tab);
 }

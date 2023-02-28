@@ -61,7 +61,7 @@ hr {
 /* note */
 .note {
 	color: var(--text-main);
-	margin-bottom: 8px;
+	margin-bottom: 0;
 }
 
 .note:hover {

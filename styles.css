@@ -11,16 +11,37 @@ td {
 	vertical-align: middle;
 }
 
-/* align */
-#title,
-#description {
-	text-align: center;
+/* td:nth-child(1) {
+	text-align: right;
+	padding-right: 5%;
 }
 
-#description,
+td:nth-child(2) {
+	text-align: left;
+	padding-left: 5%;
+} */
+
+/* align */
+.no-mt {
+	margin-top: 0;
+}
+
 #title,
+#description,
+h1,
 hr {
 	margin-bottom: 0;
+}
+
+#title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#description {
+	text-align: center;
+	margin-top: 12px;
 }
 
 #panel {
@@ -37,11 +58,22 @@ hr {
 	text-align: right;
 }
 
-/* other */
-#title > a:hover {
+/* note */
+.note {
+	color: var(--text-main);
+	margin-bottom: 8px;
+}
+
+.note:hover {
 	text-decoration: none;
 }
 
-#new-tab:hover {
+/* other */
+.no-dec:hover {
 	text-decoration: none;
+}
+
+img {
+	width: 35px;
+	height: 35px;
 }

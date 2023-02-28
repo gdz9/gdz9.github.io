@@ -21,24 +21,23 @@ html
     script(defer src='./main.js')
   body
     // title
-    h1
+    h1.no-mt
       p#title
-        a(href='./meme/') gdz9
+        img(src="favicon.png")
+        a.no-dec(href='./meme/') &nbsp;gdz9
     p#description= description
     br
-    // download & new tab
+    // panel
     #panel
       div
         // download
-        p(align='center')
-          | Пакет усіх підручників (PDF)
-          br
-          a(href='https://drive.google.com/file/d/1lIqegb46nSO3kIdbHnbDNL-Zd4UJJvEG/view' target='_blank') Підручники.zip
+        p(align='left')
+          a.no-dec(href='https://drive.google.com/file/d/1lIqegb46nSO3kIdbHnbDNL-Zd4UJJvEG/view' target='_blank') 🔗 Пакет усіх підручників (PDF)
       div
-        // new tab
+        // open new tab
         p(align='center')
-          input#new-tab-checkbox(type='checkbox' checked onchange="on_new_tab_checkbox(this)")
-          a#new-tab Відкривати у новій вкладці
+          input#checkbox-open-new-tab(type='checkbox' checked onchange="onOpenNewTabCheck(this)")
+          a.no-dec Відкривати у новій вкладці
     br
     // list
     table
@@ -107,11 +106,11 @@ html
           [
             {
               u: 'https://shkola.obozrevatel.com/gdz/9klass/pravovedenie/narovlyanskij-2017/',
-              t: 'Основи правознавства*'
+              t: 'Правознавство*'
             },
             {
               u: 'https://12baliv.com.ua/gdz-9-klas-pravoznavstvo-narovlyanskyj-2017',
-              t: 'Основи правознавства (12baliv)'
+              t: 'Правознавство (12baliv)'
             },
           ],
           [
@@ -147,6 +146,8 @@ html
         ];
       each row in list
         +row(row[0], row[1])
+    //
+    p.note * shkola.obozrevatel.com
     // footer
     +br(2)
     hr
@@ -158,4 +159,4 @@ html
         a(href='https://github.com/gdz9' target='_blank') gdz9
         | ,
         br
-        | Arsenii C.
+        | Arsenii C

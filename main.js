@@ -1,26 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let new_tab_checkbox = document.getElementById('new-tab-checkbox');
+  let openNewTab = document.getElementById('checkbox-open-new-tab');
   if (localStorage.getItem('open_new_tab') === 'true') {
-    new_tab_checkbox.checked = true;
-    table_set_target(true);
+    openNewTab.checked = true;
+    tableSetTarget(true);
   } else if (localStorage.getItem('open_new_tab') === 'false') {
-    new_tab_checkbox.checked = false;
-    table_set_target(false);
+    openNewTab.checked = false;
+    tableSetTarget(false);
   } else {
     // default
-    new_tab_checkbox.checked = true;
+    openNewTab.checked = true;
   }
 });
 
-function on_new_tab_checkbox(e) {
-  let open_new_tab = e.checked;
-  table_set_target(open_new_tab);
-  localStorage.setItem('open_new_tab', open_new_tab);
+function onOpenNewTabCheck(e) {
+  let openNewTab = e.checked;
+  tableSetTarget(openNewTab);
+  localStorage.setItem('open_new_tab', openNewTab);
 }
 
-function table_set_target(open_new_tab) {
+function tableSetTarget(openNewTab) {
   let table = document.querySelectorAll("table tr td a");
   for (let x of table) {
-    x.target = `${open_new_tab ? '_blank' : '_self'}`;
+    x.target = `${openNewTab ? '_blank' : '_self'}`;
   }
 }
